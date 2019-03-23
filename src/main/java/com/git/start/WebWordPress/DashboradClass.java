@@ -16,4 +16,7 @@ public class DashboradClass {
 	      WebElement clickAddnew=  driver.findElement(By.xpath("//a[text()='Add New'][@href='post-new.php']"));
 	      clickAddnew.click();
 	}
+	public void test() {
+		System.out.println("Testt");
+	}
 }
