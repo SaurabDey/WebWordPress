@@ -17,6 +17,7 @@ public class DashboradClass {
 	      clickAddnew.click();
 	      
 	      System.out.println("Succesfully Loaded Project on local System");
+	      System.out.println("Amol");
 	}
 	public void test() {
 		System.out.println("Testt");
