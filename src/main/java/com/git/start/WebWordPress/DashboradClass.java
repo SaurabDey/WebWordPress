@@ -15,5 +15,7 @@ public class DashboradClass {
 	      clickPost.click();
 	      WebElement clickAddnew=  driver.findElement(By.xpath("//a[text()='Add New'][@href='post-new.php']"));
 	      clickAddnew.click();
+	      
+	      System.out.println("Succesfully Loaded Project on local System");
 	}
 }
