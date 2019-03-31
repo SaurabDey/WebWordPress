@@ -12,7 +12,6 @@ public class DashboradClass {
 	public DashboradClass(WebDriver driver2) {
 		driver = driver2;
 	}
-
 	public void dashboradmethod() {
 		WebElement clickPost = driver.findElement(By.xpath("//div[text()='Posts']"));
 		clickPost.click();
@@ -48,7 +47,9 @@ public class DashboradClass {
 		
 	}
 
+
 	public void test() {
 		System.out.println("Testt");
+		
 	}
 }
