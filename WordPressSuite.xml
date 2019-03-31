@@ -7,17 +7,4 @@
 		</classes>
 	</test> <!-- Test -->
 
-	<test name="Test2">
-		<parameter name="bro" value="internetExplorer"></parameter>
-		<classes>
-			<class name="com.git.start.WebWordPress.WordPressAutomation" />
-		</classes>
-	</test> <!-- Test -->
-
-	<test name="Test3">
-		<parameter name="bro" value="firefox"></parameter>
-		<classes>
-			<class name="com.git.start.WebWordPress.WordPressAutomation" />
-		</classes>
-	</test> <!-- Test -->
 </suite> <!-- Suite -->

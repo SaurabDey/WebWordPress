@@ -14,11 +14,17 @@ public class DashboradClass {
 		WebElement clickPost=  driver.findElement(By.xpath("//div[text()='Posts']"));
 	      clickPost.click();
 	      WebElement clickAddnew=  driver.findElement(By.xpath("//a[text()='Add New'][@href='post-new.php']"));
+	      System.out.println("Hello");
 	      clickAddnew.click();
 	      
+
+	      WebElement enter =  driver.findElement(By.xpath("//input[@name='post_title']"));
+	         enter.sendKeys("abcd");
+
 	      System.out.println("Succesfully Loaded Project on local System");
 	      System.out.println("Deepak Test");
 	  }
+
 	public void test() {
 		System.out.println("Testt");
 		

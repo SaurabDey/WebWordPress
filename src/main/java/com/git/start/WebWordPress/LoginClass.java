@@ -18,6 +18,11 @@ public class LoginClass {
 	      password.sendKeys("demo123");
 	      
 	      WebElement loginButn=  driver.findElement(By.xpath("//input[@type='submit']"));
-	      loginButn.click();  
+	                 
+	
+	      loginButn.click();
+	      
+	     System.out.println("Hello");
 	}
+	
 }

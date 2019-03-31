@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -12,6 +13,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterTest;
 
 public class WordPressAutomation {
@@ -26,6 +28,9 @@ public class WordPressAutomation {
 		DashboradClass dash = new DashboradClass(driver);
 		dash.dashboradmethod();
 
+		LogoutClass logout= new LogoutClass(driver);
+		logout.logoutMethod();
+		
 	}
 
 	@Parameters("bro")
