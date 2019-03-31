@@ -18,6 +18,12 @@ public class LogoutClass {
 		
 		WebElement logout =  driver.findElement(By.id("wp-admin-bar-logout"));
 		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		Actions act= new Actions(driver);
 		act.moveToElement(admin).pause(Duration.ofSeconds(3)).moveToElement(logout).click().build().perform();
 		
