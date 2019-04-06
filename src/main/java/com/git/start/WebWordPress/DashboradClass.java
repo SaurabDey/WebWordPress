@@ -5,16 +5,23 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class DashboradClass {
 	WebDriver driver;
+	
+	@FindBy(xpath="//div[text()='Posts']")
+	WebElement locatorClickPost;
+	
 
 	public DashboradClass(WebDriver driver2) {
 		driver = driver2;
+		PageFactory.initElements(driver, this);
 	}
 	public void dashboradmethod() {
-		WebElement clickPost = driver.findElement(By.xpath("//div[text()='Posts']"));
-		clickPost.click();
+		locatorClickPost.click();
+		
 		WebElement clickAddnew = driver.findElement(By.xpath("//a[text()='Add New'][@href='post-new.php']"));
 		System.out.println("Hello");
 		clickAddnew.click();
