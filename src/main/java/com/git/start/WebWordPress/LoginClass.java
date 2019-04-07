@@ -37,7 +37,7 @@ public class LoginClass {
 		try {
 			locatorUsername.sendKeys("admin");
 
-			locatorPassword.sendKeys("demo");
+			locatorPassword.sendKeys("demo123");
 
 			locatorLoginBut.click();
 

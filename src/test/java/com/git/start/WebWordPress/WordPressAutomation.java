@@ -24,7 +24,9 @@ import org.testng.annotations.AfterTest;
 
 public class WordPressAutomation {
 	WebDriver driver;
-	ExtentReports extent;
+	static ExtentHtmlReporter htmlReporter;
+	static ExtentReports extent;
+	
 	ExtentTest test;
 	@Test
 	public void f() {
@@ -59,7 +61,7 @@ public class WordPressAutomation {
 	@Parameters("bro")
 	@BeforeTest
 	public void beforeTest(String comingValue) {
-		ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("WordPressReport.html");
+		htmlReporter = new ExtentHtmlReporter("WordPressReportMultipleBrowser.html");
 		htmlReporter.config().setTheme(Theme.DARK);
 		htmlReporter.config().setChartVisibilityOnOpen(true);
 		htmlReporter.setAppendExisting(true);
@@ -68,7 +70,7 @@ public class WordPressAutomation {
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReporter);
 
-		test = extent.createTest("Saurab Test");
+		test = extent.createTest("Test "+comingValue);
 		test.pass("Started my Automation");
 
 		String browser = comingValue;
