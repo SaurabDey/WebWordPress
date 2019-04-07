@@ -35,9 +35,10 @@ public class LoginClass {
 
 	public void loginMethod() throws IOException {
 		try {
-			locatorUsername.sendKeys("admin");
-
-			locatorPassword.sendKeys("demo123");
+			CommonUtil com= new CommonUtil(driver);
+			String[] value= com.readExcelFile();
+			locatorUsername.sendKeys(value[0]);
+			locatorPassword.sendKeys(value[1]);
 
 			locatorLoginBut.click();
 
