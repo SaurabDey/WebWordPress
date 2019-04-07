@@ -30,25 +30,25 @@ public class WordPressAutomation {
 	public void f() {
 
 		try {
-			LoginClass log = new LoginClass(driver);
+			LoginClass log = new LoginClass(driver,test);
 			log.loginMethod();
-			test.pass("Login method worked successfully");
+			
 		} catch (Exception e) {
 			test.fail("Login method had some error");
 		}
 
 		try {
-			DashboradClass dash = new DashboradClass(driver);
+			DashboradClass dash = new DashboradClass(driver, test);
 			dash.dashboradmethod();
-			test.pass("dashborad method worked successfully");
+			
 		} catch (Exception e) {
 			test.fail("dashborad method had some error");
 		}
 		
 		try {
-			LogoutClass logout = new LogoutClass(driver);
+			LogoutClass logout = new LogoutClass(driver,test);
 			logout.logoutMethod();
-			test.pass("logout Method worked successfully");
+			
 		} catch (Exception e) {
 			test.fail("logout method had some error");
 		}
