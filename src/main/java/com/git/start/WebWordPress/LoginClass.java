@@ -36,7 +36,9 @@ public class LoginClass {
 	public void loginMethod() throws IOException {
 		try {
 			CommonUtil com= new CommonUtil(driver);
-			String[] value= com.readExcelFile();
+			//String[] value= com.readExcelFile();
+			
+			String[] value=com.dbconnection();
 			locatorUsername.sendKeys(value[0]);
 			locatorPassword.sendKeys(value[1]);
 

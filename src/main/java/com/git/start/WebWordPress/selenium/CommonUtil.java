@@ -3,6 +3,11 @@ package com.git.start.WebWordPress.selenium;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -67,5 +72,31 @@ public class CommonUtil {
 		}
 
 		return myvalue;
+	}
+	
+	public String[] dbconnection() throws SQLException {
+		
+		Connection con = DriverManager.getConnection("jdbc:mysql://192.168.0.2:3306/classicmodels", "root", "selenium");
+
+		System.out.println("Connected to database");
+		
+		Statement stm = con.createStatement();
+		
+		ResultSet rs= stm.executeQuery("select * from employees where employeeNumber= 1076;");
+		
+		String [] dbVales = null;
+		while (rs.next()) {
+			
+			String firstNameValue=rs.getString("firstName");
+			String lastNameValue=rs.getString("lastName");
+			
+			dbVales=new String[2];
+			dbVales[0]=firstNameValue;
+			dbVales[1]=lastNameValue;
+			
+		}
+		con.close();
+		
+		return dbVales;
 	}
 }
